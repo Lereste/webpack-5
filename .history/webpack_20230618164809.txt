@@ -1,0 +1,40 @@
+1) Webpack là gì
+- Khái niệm: Webpack là một tool chạy trên môi trường NodeJs giúp chúng ta đóng gói các file js, css, sass, jpg...
+- Ngoài ra webpack còn giúp chúng ta tạo một server ảo để thuận tiện cho việc code.
+
+2) Cách cài đặt webpack
+- Cài đặt global để sử dụng bất kì đâu
+npm install –g webpack
+
+- Cài đặt trong 1 project nào đó
+=> npm install webpack webpack-cli
+
+-> package.json
+-> webpack.config.js
+
+3) Module trong webpack 
+=> Có 4 loại: 
+- Resource 
+- Inline 
+- Source 
+- Asset 
+
+4) Loader
+
+
+5) Plugins:
+- Terser 
+- MiniCssExtract (bỏ cmt rules, plugin, index)
+- CleanWebpack
+
+6) Browser Caching - 
+
+Ngày trước khi mà mỗi lần mà trình duyệt load website, nó sẽ tải về tất cả các tài nguyên cần thiết của website.
+Khi load nhiều lần thì nó sẽ bị chậm, vì lần nào cũng sẽ tải về tài nguyên mới.
+Cache xuất hiện để giải quyết vấn đề này -> Nếu dữ liệu không thay đổi giữa những lần reload lại trang -> thì không cần tải về file mới -> chạy nhanh
+Nhưng nó cũng có 1 side effect khác. Nếu chúng ta fix bug nào đấy và push lên trên website (đổi code javascript) -> Thì người dùng sẽ không thấy đc thay đổi mới -> Vì cache nó không update
+Ta xử lý bằng cách mỗi lần fix bug xong -> build webpack -> tạo ra 1 tên file mới -> trình duyệt sẽ tải về và lưu nó vào cache
+
+Ví dụ: Thêm vào bundle.[contenthash].js hoặc style.[contenthash].css
+
+=> Khi tên file bundle.d19331uhdksad.js -> Dùng HtmlWwebpackPlugin để auto import nó vào index.html
